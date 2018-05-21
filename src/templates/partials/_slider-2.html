@@ -1,0 +1,32 @@
+<!-- begin slider -->
+<div class="slider">
+	<!-- begin slider__slides -->
+	<div class="slider__slides js-slider">
+
+		{% for key in sliderItem2 %}
+		<!-- begin slider__item -->
+		<div class="slider__item js-slide" data-tab="{{key.dataTab}}">
+			<div class="slider__img">
+				<img src="img/{{key.nameImg}}" width="300" height="300">
+				<div class="counter"></div>
+			</div>
+			<div class="slide__content">
+				<h2 class="slide__title">{{key.title}}</h2>
+				<div class="slider__descr">{{key.content}}</div>
+				<ul class="slider__list">
+					<li class="slider__list-item">Item1</li>
+					<li class="slider__list-item">Item2</li>
+					<li class="slider__list-item">Item3</li>
+					<li class="slider__list-item">Item4</li>
+				</ul>
+				<p class="slider__data"><span>1 july</span> <span>something#1</span></p>
+				<a href="#" class="slider__btn js-open-popup" data-tab="{{key.dataTab}}" data-index="{{key.btnDataIndex}}">More</a>
+			</div>
+		</div>
+		<!-- end slider__item -->
+		{% endfor %}
+
+	</div>
+	<!-- end slider__slides -->
+</div>
+<!-- end slider -->

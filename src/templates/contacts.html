@@ -1,0 +1,36 @@
+---
+title: contacts
+---
+{% extends "layouts/_layout.html" %}
+ {% block content %} 
+ {% include "partials/_breadcrumbs.html"%}
+
+
+<!-- begin section -->
+<div class="section">
+
+  <h2 class="section__title">
+    <div>Контакты</div>
+  </h2>
+
+  {% include "partials/_map.html" %}
+
+  {% include "partials/_contacts.html" %}
+
+  <div class="section__link">
+    <div class="section__link-promo">
+      Остались
+      <span>вопросы ?</span>
+    </div>
+    <div class="section__link-popup">
+      <a class="btn-popup" href="#">Задайте их менеджеру</a>
+    </div>
+  </div>
+
+  {% include "partials/_form.html" %}
+
+</div>
+<!-- end section -->
+
+
+{% endblock %}

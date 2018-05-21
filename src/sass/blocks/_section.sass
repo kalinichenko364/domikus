@@ -1,0 +1,82 @@
+.section
+	position: relative
+
+	padding: 90px 0 0 0
+
+	&--red 
+		background-color: $red
+
+	&--blue
+		background-color: $blue
+
+	&__descr
+		display: flex
+		justify-content: space-around
+
+	&__link
+		display: flex
+		justify-content: center
+		margin-top: 45px
+		a
+			font-size: 20px
+			color: $red
+			text-transform: uppercase
+			border-bottom: 2px solid $white
+			text-decoration: none
+			&:hover
+				border-color: $red
+
+	&__link
+    display: flex
+    align-items: flex-end
+    margin-bottom: 90px
+    &-promo
+      margin-left: auto
+
+      font-size: 50px
+      line-height: 50px
+      text-transform: uppercase
+      span
+        font-weight: bold
+        color: $red
+    &-popup
+      margin-right: auto
+      margin-left: 20px
+
+      font-size: 25px
+      line-height: 40px
+      text-decoration: underline
+				
+
+	&__title
+		position: relative
+		display: flex
+		justify-content: center
+		
+		max-width: 1000px
+		margin: 0 auto 45px
+
+		font-size: 20px
+		letter-spacing: 0.5px
+
+		div
+			padding: 13px 25px 11px
+			background-color: $blue
+			color: $white
+			font-weight: 400
+			text-transform: uppercase
+			border-radius: 40px
+
+		&::before, &::after
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			content: ''
+			width: 50%
+			height: 1px
+			background-color: $blue
+			z-index: -10
+		&::before
+			left: 0
+		&::after
+			right: 0

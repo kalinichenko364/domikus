@@ -1,0 +1,43 @@
+<!-- begin tabs -->
+<div class="js-tabs tabs">
+	<!-- begin tabs__header -->
+	<ul class="tabs__header js-index">
+		{% for key in tabsTitle %}
+		<li class="js-tabs-label tabs__title {{key.active}}" data-page="{{key.dataPage}}">{{key.title}}</li>
+		{% endfor %}
+	</ul>
+	<!-- end tabs__header -->
+
+	<!-- begin js-tabs-container -->
+	<div class="js-tabs-container tabs__container">
+
+		<!-- begin tabs__content -->
+		<div class="tabs__content js-tabs-content">
+
+			{% include "partials/_new-product.html" %}
+
+		</div>
+		<!-- end tabs__content -->
+
+		<!-- begin tabs__content -->
+		<div class="tabs__content js-tabs-content">
+
+			{% include "partials/_slider-2.html" %}
+
+		</div>
+		<!-- end tabs__content -->
+
+	</div>
+	<!-- end js-tabs-container -->
+</div>
+<!-- end tabs -->
+
+<!-- begin slider-popup -->
+<div class="slider-popup">
+	<div class="overlay"></div>
+	<button class="slider-popup__close" type="button"></button>
+	<div class="slider-popup__slides js-slider-popup">
+
+	</div>
+</div>
+<!-- end slider-popup -->
