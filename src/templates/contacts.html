@@ -17,17 +17,14 @@ title: contacts
 
   {% include "partials/_contacts.html" %}
 
-  <div class="section__link">
-    <div class="section__link-promo">
-      Остались
-      <span>вопросы ?</span>
-    </div>
-    <div class="section__link-popup">
-      <a class="btn-popup" href="#">Задайте их менеджеру</a>
+  {% include "partials/_block-ask.html" %}
+
+  <div class="popup">
+    <div class="popup__content">
+      {% include "partials/_form.html" %}
     </div>
   </div>
-
-  {% include "partials/_form.html" %}
+  <div class="overlay"></div>
 
 </div>
 <!-- end section -->

@@ -5,7 +5,7 @@ $(document).ready(function() {
     e.preventDefault();
 
     $('.overlay').fadeIn(400, function() {
-      $('.form__content-popup')
+      $('.popup')
         .css('display', 'block')
         .animate({opacity: 1, top: '50%'}, 200);
     });
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
   // close popup
   $('.btn-close, .overlay').on('click', function() {
-    $('.form__content-popup')
+    $('.popup')
       .animate({opacity: 0, top: '45%'}, 200, function() {
         $(this).css('display', 'none');
         $('.overlay').fadeOut(400);
