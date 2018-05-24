@@ -5,4 +5,9 @@ PageList:
   ready: 50
 - file: contacts.html
   ready: 50
-  
+- file: about.html
+  ready: 50
+- file: shipping-pay.html
+  ready: 50
+- file: wholesalers.html
+  ready: 50

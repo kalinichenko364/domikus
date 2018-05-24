@@ -1,0 +1,48 @@
+.btn
+  padding: 7px  20px
+  margin-right: 10px
+  font-weight: bold
+  color: $white
+  border: 1px solid $blue
+  border-radius: 5px
+  background-color: $red
+
+  &--form
+    float: right
+
+  &-close
+    position: absolute
+    top: 10px
+    right: 10px
+
+    width: 20px
+    height: 20px
+    font-size: 0
+
+    background-color: $blue
+    opacity: 0.5
+    
+    &:hover
+      opacity: 1
+
+    &:active
+      opacity: 0.1
+    
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      top: 7px
+      right: -3px
+
+      width: 22px
+      height: 4px
+
+      background-color: $red
+      border-radius: 2px
+
+    &:before
+      transform: rotate(45deg)
+
+    &:after
+      transform: rotate(-45deg)
