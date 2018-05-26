@@ -1,29 +1,59 @@
+{% set 
+mainNav = [
+	{
+		title: 'Каталог'
+	},
+	{
+		title: 'Доставка и оплата',
+		level2: [
+			{
+				title: 'Двойнная'
+			},
+			{
+				title: 'Одиночнная'
+			},
+			{
+				title: 'Семья'
+			},
+			{
+				title: 'Подростковая'
+			},
+			{
+				title: '2-x спальнная'
+			}
+		]
+	},
+	{
+		title: 'О Нас'
+	},
+	{
+		title: 'Информация'
+	},
+	{
+		title: 'Контакты'
+	}
+]
+%}
+
 <!-- begin main-nav -->
 <nav class="main-nav">
 	
 	<ul class="main-nav__list">
-		<!-- <li class="main-nav__item"><a href="" class="main-nav__link">Главная</a></li> -->
+		{% for item in mainNav %}
 		<li class="main-nav__item">
-			<a href="" class="main-nav__link">
-			Каталог
-
+			<a href="" class="main-nav__link">{{item.title}}</a>
+			
+			{% if item.level2 %}
 			<ul class="main-nav__level2">
-				<li><a href="">Евро</a></li>
-				<li><a href="">Двойнная</a></li>
-				<li><a href="">Одиночнная</a></li>
-				<li><a href="">Семья</a></li>
-				<li><a href="">Подростковая</a></li>
-				<li><a href="">2-х спальнная</a></li>
+				{% for item in item.level2 %}
+				<li><a href="">{{item.title}}</a></li>
+				{% endfor %}
 			</ul>
-
-			</a>
+			{% endif %}
+			
 		</li>
-
-		<li class="main-nav__item"><a href="shipping-pay.html" class="main-nav__link">Доставка и оплата</a></li>
-		<li class="main-nav__item"><a href="about.html" class="main-nav__link">О Нас</a></li>
-		<li class="main-nav__item"><a href="wholesalers.html" class="main-nav__link">Информация</a></li>
-		<li class="main-nav__item"><a href="contacts.html" class="main-nav__link">Контакты</a></li>
+		{% endfor %}
 	</ul>
 
 </nav>
-<!-- end main-nav -->
+<!-- end main-nav

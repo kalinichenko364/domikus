@@ -1,17 +1,43 @@
 .main-nav 
-	padding: 20px 0
 	font-size: 18px
 	line-height: 1.2
 
 	&__list
 		display: flex
 		justify-content: space-between
-
-	&__level2
-		display: none
+		
+	&__item
+		position: relative
+		padding: 20px 0
+		&:hover .main-nav__level2
+			display: block
 	
 	&__link
 		font-family: 'Roboto', sans-serif
 		color: $white
 		&:hover
 			border-bottom: 2px solid $white
+		&:hover .main-nav__level2
+			display: block
+			
+	&__level2
+		display: none
+		position: absolute
+		top: 62px
+		left: 0
+		background-color: $red
+		z-index: 10
+		
+		li
+			display: flex
+			border-bottom: 1px solid $white
+			&:first-child
+				border-top: 1px solid $white 
+			&:hover
+				background-color: $blue 
+			
+		a
+			padding: 20px
+			font-family: 'Roboto', sans-serif
+			color: $white
+	
