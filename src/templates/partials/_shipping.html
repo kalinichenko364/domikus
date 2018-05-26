@@ -1,9 +1,11 @@
+  
   <div class="block-list">
-    <h3 class="block-list__title">{{key.title}}</h3>
-    <p class="block-list__descr">{{key.descr}}</p>
+    <h3 class="block-list__title">{{item.title}}</h3>
+    <p class="block-list__descr">{{item.descr}}</p>
     <ul class="block-list__items">
-      <li class="block-list__item">{{key.item1}}</li>
-      <li class="block-list__item">{{key.item2}}</li>
-      <li class="block-list__item">{{key.item3}}</li>
+
+      {% for key in item.level2%}
+      <li class="block-list__item">{{key.title}}</li>
+      {% endfor %}
     </ul>
   </div>

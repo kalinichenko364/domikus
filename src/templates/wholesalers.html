@@ -84,19 +84,22 @@ newProduct: [
 
 partnership: [
 {
-	img: /src/img/partner-1.png,
-	nameClient: 'Интернет-магазины',
-	amount: 'Отправка от одного комплекта'
+	img: 'img/partner-1.png',
+	title: 'Интернет-магазины',
+	amount: 'Отправка от одного комплекта',
+	href: '#'
 },
 {
-	img: /src/img/partner-1.png,
-	nameClient: 'Интернет-магазины',
-	amount: 'Отправка от одного комплекта'
+	img: 'img/partner-1.png',
+	title: 'Интернет-магазины',
+	amount: 'Отправка от одного комплекта',
+	href: '#'
 },
 {
-	img: /src/img/partner-1.png,
-	nameClient: 'Интернет-магазины',
-	amount: 'Отправка от одного комплекта'
+	img: 'img/partner-1.png',
+	title: 'Интернет-магазины',
+	amount: 'Отправка от одного комплекта',
+	href: '#'
 }
 ]
 ---
@@ -148,13 +151,14 @@ partnership: [
 	<h2 class="section__title"><div>Возможные виды сотрудничества</div></h2>
 	<div class="section__content">
 		
-			<div class="partnership">
+			
 				<div class="container">
+					<div class="partnership">
 					{% for key in partnership %}
 						{% include "partials/_partnership.html" %}
 					{% endfor %}
+					</div>
 				</div>
-			</div>
 		
 	</div>
 </div>
