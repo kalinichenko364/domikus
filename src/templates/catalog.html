@@ -1,0 +1,55 @@
+---
+title: Каталог
+
+allProduct: [
+  {
+    srcImg: 'foto1.jpg',
+    title: 'Title1',
+    price: '573',
+    descr: 'Lorem ipsum dolor',
+    vendorCode: '#43-568-765'
+  }
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "partials/_breadcrumbs.html"%}
+
+
+<!-- begin section -->
+<div class="section">
+
+  <h2 class="section__title">
+    <div>Каталог</div>
+  </h2>
+
+  <div class="container">
+
+    <div class="catalog">
+      
+      <div class="catalog__left">
+        {% include "partials/_accordion.html" %}
+      </div>
+
+      <div class="catalog__right">
+
+        {% for item in allProduct %}
+          <div class="catalog__item">
+            {% include "partials/_product-card.html" %}
+          </div>
+        {% endfor %}
+        
+      </div>
+
+    </div>
+  
+
+  </div>
+
+</div>
+<!-- end section -->
+
+
+{% endblock %}

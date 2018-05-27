@@ -25,36 +25,32 @@ tabsTitle: [
 
 newProduct: [
 {
-	dataTab: '1',
 	title: 'Title 1',
-	nameImg: 'foto1.jpg',
+	srcImg: 'foto1.jpg',
 	price: '573',
 	descr: 'Lorem ipsum dolor',
 	vendorCode: '#43-568-765'
 
 },
 {
-	dataTab: '1',
 	title: 'Title 2',
-	nameImg: 'foto2.jpg',
+	srcImg: 'foto2.jpg',
 	price: '643',
 	descr: 'Lorem ipsum dolor',
 	vendorCode: '#43-568-765'
 	
 },
 {
-	dataTab: '1',
 	title: 'Title 3',
-	nameImg: 'foto1.jpg',
+	srcImg: 'foto1.jpg',
 	descr: 'Lorem ipsum dolor',
 	price: '763',
 	vendorCode: '#43-568-765'
 	
 },
 {
-	dataTab: '1',
 	title: 'Title 4',
-	nameImg: 'foto2.jpg',
+	srcImg: 'foto2.jpg',
 	price: '597',
 	descr: 'Lorem ipsum dolor',
 	vendorCode: '#43-568-765'
@@ -62,41 +58,37 @@ newProduct: [
 }
 ]
 
-sliderItem2: [
+hitsProduct: [
 {
-	dataPage: '2',
 	title: 'Title 1',
-	nameImg: 'foto3.jpg',
-	content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
-	btnDataIndex: '0'
+	srcImg: 'foto3.jpg',
+	price: '573',
+	descr: 'Lorem ipsum dolor',
+	vendorCode: '#43-568-765'
 
 },
 {
-	dataPage: '2',
 	title: 'Title 2',
-	nameImg: 'foto4.jpg',
-	content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
-	btnDataIndex: '1'
+	srcImg: 'foto4.jpg',
+	price: '643',
+	descr: 'Lorem ipsum dolor',
+	vendorCode: '#43-568-765'
 	
 },
 {
-	dataPage: '2',
 	title: 'Title 3',
-	nameImg: 'foto3.jpg',
-	content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
-	btnDataIndex: '2'
+	srcImg: 'foto3.jpg',
+	descr: 'Lorem ipsum dolor',
+	price: '763',
+	vendorCode: '#43-568-765'
 	
 },
 {
-	dataPage: '2',
 	title: 'Title 4',
-	nameImg: 'foto4.jpg',
-	content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
-	btnDataIndex: '3'
+	srcImg: 'foto4.jpg',
+	price: '597',
+	descr: 'Lorem ipsum dolor',
+	vendorCode: '#43-568-765'
 	
 }
 ]
@@ -172,7 +164,7 @@ products: [
 <div class="section">
 
 	<div class="container">
-		{% include "partials/_tabs.html" %}
+		{% include "partials/_tabs-slider.html" %}
 	</div>
 
 	<div class="section__link">
@@ -186,7 +178,21 @@ products: [
 <div class="section">
 	<h2 class="section__title"><div>Наша продукция</div></h2>
 
-	{% include "partials/_products.html" %}
+	<!-- begin products -->
+	<div class="products">
+		<!-- begin container -->
+		<div class="container products__layout">
+			
+			{% for item in products %}
+				<div class="products__item">
+				{% include "partials/_our-product.html" %}
+				</div>
+			{% endfor %}
+
+		</div>
+		<!-- end container -->
+	</div>
+	<!-- end products -->
 
 	<div class="container">
 		<div class="section__descr">
