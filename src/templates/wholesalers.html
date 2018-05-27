@@ -102,6 +102,24 @@ partnership: [
 	href: '#'
 }
 ]
+
+reviews: [
+{
+	name: 'Виктор',
+	date: '12 апреля',
+	text: 'Я работаю с компанией «Аморе» недавно , чувствуется любовь к своему делу и профессиональный подход.'
+},
+{
+	name: 'Виктор',
+	date: '12 апреля',
+	text: 'Я работаю с компанией «Аморе» недавно , чувствуется любовь к своему делу и профессиональный подход.'
+},
+{
+	name: 'Виктор',
+	date: '12 апреля',
+	text: 'Я работаю с компанией «Аморе» недавно , чувствуется любовь к своему делу и профессиональный подход.'
+}
+]
 ---
 {% extends "layouts/_layout.html" %}
  {% block content %} 
@@ -154,6 +172,21 @@ partnership: [
 			{% for key in partnership %}
 				{% include "partials/_partnership.html" %}
 			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end section -->
+
+<!-- begin section -->
+<div class="section">
+	<h2 class="section__title"><div>Что говорят о нас наши покупатели:</div></h2>
+	<div class="container">
+		<div class="reviews">
+			<div class="reviews__items">
+				{% for key in reviews %}
+					{% include "partials/_review.html" %}
+				{% endfor %}
+			</div>
 		</div>
 	</div>
 </div>

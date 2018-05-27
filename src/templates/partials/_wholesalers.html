@@ -46,24 +46,7 @@
 
       </div>
 
-      <div class="callback">
-        <div class="callback__title">
-          Вас заинтересовала возможность Выгодного сотрудничества?
-        </div>
-        <div class="callback__text">
-          Свяжитесь с нами прямо сейчас:
-        </div>
-        <div class="callback__tel">
-          <a href="tel=(050)495-55-58" class="callback__tel-linck">{{mixins.icon('phone')}}&nbsp(050) 495-55-58</a>
-        </div>
-        <p>Или оставьте Ваш номер телефона и мы сами Вам перезвоним:</p>
-        <div class="callback-form">
-          <form action="">
-            <input class="callback-form__input" type="tel" placeholder="Ваш телефон"/>
-            <button class="btn btn--callback-form">Заказать звонок</button>
-          </form>
-        </div>
-      </div>
+      {% include "partials/_callback.html" %}
 
     </div>
 

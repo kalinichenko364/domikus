@@ -1,0 +1,32 @@
+.reviews
+  min-height: 500px
+
+  background: url("../img/reviews.jpg") no-repeat center right
+
+.review
+  width: 500px
+  padding: 20px 10px
+  margin-bottom: 40px
+
+  border: 4px solid $white
+  border-radius: 5px
+  box-shadow: 1px 4px 11px -1px $blue
+  background-color: $pink
+
+  &:nth-child(2n)
+    margin-left: 100px
+
+  &__item-top 
+    display: flex
+    justify-content: space-between
+    margin-bottom: 15px
+
+  &__name
+    font-size: 27px
+    line-height: 27px
+    font-style: italic
+    color: $red
+
+  &__text
+    margin: 0 20px
+    
