@@ -1,36 +1,46 @@
 {% set 
 mainNav = [
 	{
-		title: 'Каталог'
-	},
-	{
-		title: 'Доставка и оплата',
+		title: 'Каталог',
+		href: 'catalog.html',
 		level2: [
 			{
-				title: 'Двойнная'
+				title: 'Двойнная',
+				href: 'catalog.html'
 			},
 			{
-				title: 'Одиночнная'
+				title: 'Одиночнная',
+				href: 'catalog.html'
 			},
 			{
-				title: 'Семья'
+				title: 'Семья',
+				href: 'catalog.html'
 			},
 			{
-				title: 'Подростковая'
+				title: 'Подростковая',
+				href: 'catalog.html'
 			},
 			{
-				title: '2-x спальнная'
+				title: '2-x спальнная',
+				href: 'catalog.html'
 			}
 		]
 	},
 	{
-		title: 'О Нас'
+		title: 'Доставка и оплата',
+		href: 'shipping-pay.html'		
 	},
 	{
-		title: 'Информация'
+		title: 'О Нас',
+		href: 'about.html'
 	},
 	{
-		title: 'Контакты'
+		title: 'Оптовикам',
+		href: 'wholesalers.html'
+	},
+	{
+		title: 'Контакты',
+		href: 'contacts.html'
 	}
 ]
 %}
@@ -41,12 +51,12 @@ mainNav = [
 	<ul class="main-nav__list">
 		{% for item in mainNav %}
 		<li class="main-nav__item">
-			<a href="" class="main-nav__link">{{item.title}}</a>
+			<a href="{{item.href}}" class="main-nav__link">{{item.title}}</a>
 			
 			{% if item.level2 %}
 			<ul class="main-nav__level2">
 				{% for item in item.level2 %}
-				<li><a href="">{{item.title}}</a></li>
+				<li><a href="{{item.href}}">{{item.title}}</a></li>
 				{% endfor %}
 			</ul>
 			{% endif %}

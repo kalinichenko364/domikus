@@ -1,0 +1,23 @@
+ul
+
+	&.inner 
+		overflow: hidden;
+		display: none;
+
+		&.show
+			/*display: block;*/
+
+	li 
+		margin: .5em 0;
+
+		a.toggle 
+			width: 100%
+			display: block
+			background: $blue
+			color: #fefefe
+			padding: .75em
+			border-radius: 12px
+			transition: background .3s ease
+
+			&:hover 
+				opacity: 0.8

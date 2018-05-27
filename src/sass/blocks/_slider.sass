@@ -1,0 +1,36 @@
+.slider
+	position: relative
+
+	&__item
+		padding: 0 12px
+		
+	&__btn
+		position: absolute
+		top: 50%
+		
+		transform: translateY(-50%)
+		width: 60px
+		height: 60px
+		
+		background-color: $red
+		border-radius: 50%
+		opacity: 0.5
+		z-index: 5
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			
+		&--prev
+			left: 0
+			
+		&--next
+			right: 0
+			
+		&:hover
+			opacity: 1
+			
+		
+		
+
